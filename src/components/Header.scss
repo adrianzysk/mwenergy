@@ -1,0 +1,140 @@
+.header{
+    background-color: #1e1f22;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    border-bottom: 2px solid #f55139;
+}
+
+.background{
+    background-color: #1e1f22;
+    width: 100%;
+    margin-top: 1px;
+    height: 75px;
+}
+
+.header-box{
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-repair{
+    height: 100px;
+}
+
+a{
+    all: unset;
+}
+a:hover{
+    color: #f55139;
+    transition: all 0.35s ease-in-out;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+         .li {
+            display: inline-block;
+            color: white;
+            letter-spacing: 1px;
+            font-weight: bold;
+            cursor: pointer;
+            }
+        }  
+} 
+
+.logo{
+   cursor: pointer;
+   padding-left: 20px;
+}
+
+.transition{
+    z-index: 1000;
+    position: fixed;
+}
+
+.button{
+    all: unset;
+    display: none;
+    font-size: 2em;
+    color: white;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #f55139;
+    transition: all 0.35s ease-in-out;
+}
+
+.not{
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+    .notDisplay{
+        display: none;
+    }
+    .display{
+        display: block;
+    }
+    nav{
+        height: 75px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .background{
+        height: 200px;
+    }
+    nav{
+        height: 200px;
+    }
+    .ul{
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
+    }
+    .li{
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .border-bottom{
+        border-bottom: .5px solid #f55139;
+    }
+}
+
+@keyframes inAnimation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+  
+@keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
